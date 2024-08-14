@@ -1,2 +1,2 @@
-# ToDoList_ITG
-Build a Responsive To-Do List Application
+# Demo
+[Preview the design here](https://ayman-dwikat.github.io/ToDoList_ITG/)
