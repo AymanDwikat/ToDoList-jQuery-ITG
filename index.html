@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="A simple and efficient To Do List application to manage your daily tasks."
+    />
+    <meta
+      name="keywords"
+      content="To Do List, Task Management, Productivity, Daily Planner, Task Organizer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <!-- Import Style Sheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Import jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/check-list.png" />
+  </head>
+
+  <body>
+    <header class="bg-primary text-white text-center py-5">
+      <div class="d-flex justify-content-center align-items-center">
+        <img src="assets/check-list.png" alt="To-Do-Img" />
+        <h1 class="d-inline ms-2 ms-sm-3">To-Do List</h1>
+      </div>
+      <h5 class="my-4 my-md-5">
+        Welcome to our to do list app. This checklist to do task lists app is
+        designed to streamline your task management.
+        <br />
+        <br />
+        A simple to do list app to manage your personal tasks, family projects,
+        and team's work.
+      </h5>
+    </header>
+
+    <main class="container">
+      <div class="row">
+        <div class="col-sm-8 col-lg-5 col-xl-6 mb-3">
+          <input type="text" id="taskText" placeholder="Add a new task..." />
+          <span class="error d-none" id="textError">Is required </span>
+        </div>
+
+        <div class="col-sm-4 col-lg mb-3">
+          <select id="priority">
+            <option value="">Priority --</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <span class="error d-none" id="priorityError">Is required </span>
+        </div>
+
+        <div class="col-sm-8 col-lg mb-3">
+          <input type="datetime-local" id="deadline" />
+        </div>
+
+        <div class="col-sm-4 col-lg mb-4">
+          <button type="button" class="btn btn-success">Add Task</button>
+        </div>
+      </div>
+
+      <select id="taskFilter" class="mt-2">
+        <option value="any">All Tasks</option>
+        <option value="completed">Completed Tasks</option>
+        <option value="pending">Pending Tasks</option>
+        <option value="not completed">Not Completed Tasks</option>
+      </select>
+
+      <div id="tasks">
+        <p class="initial-para mt-4 mb-3 text-danger"></p>
+      </div>
+
+      <div
+        class="delete-all d-flex justify-content-center justify-content-lg-end mb-4"
+      >
+        <button type="button" class="btn btn-outline-dark d-none">
+          Delete All Tasks
+        </button>
+      </div>
+    </main>
+
+    <footer class="container-fluid bg-primary text-white text-center">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md my-3 my-md-0">
+          <img src="assets/check-list.png" alt="To-Do Img" />
+          <div class="d-inline ms-1">To-Do List</div>
+        </div>
+
+        <div class="col-md my-3 my-md-0 order-3 order-md-2">
+          &copy; 2024 To-Do List
+        </div>
+
+        <div class="col-md my-3 my-md-0 order-2 order-md-3">
+          <!-- Facebook -->
+          <a
+            class="facebook btn text-white btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+
+          <!-- Twitter -->
+          <a
+            class="twitter btn text-white btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <!-- Instagram -->
+          <a
+            class="instagram btn text-white btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <!-- Github -->
+          <a
+            class="github btn text-white btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Confirm Delete Modal -->
+    <div
+      class="modal fade"
+      id="deleteModal"
+      tabindex="-1"
+      aria-labelledby="deleteModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen-sm-down">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteModalLabel"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body mb-4"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              id="confirmDelete"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Import Script -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/jquery.js"></script>
+  </body>
+</html>
