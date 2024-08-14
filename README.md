@@ -8,8 +8,8 @@ This project is a simple, responsive To-Do List application built with HTML, CSS
 - **Persistence:** Save tasks in local storage to retain them after page reload.
 - **Responsive Design:** Built with Bootstrap's grid system for a mobile-friendly layout.
 - **Modals:** Bootstrap modals for confirming task deletion.
-- **Mark Tasks as Completed:** Users can mark tasks as completed by clicking on a toggle state switch, which toggles its completed state.
-- **Filter Tasks by Status:** Users can filter tasks to display all tasks, only completed tasks, only pending tasks, or only not completed tasks.
+- **Mark Tasks as Completed:** Mark tasks as completed by clicking on a toggle state switch, which toggles its completed state.
+- **Filter Tasks by Status:** Filter tasks to display all tasks, only completed tasks, only pending tasks, or only not completed tasks.
 
 ### Live Demo
 - [Preview the design here](https://ayman-dwikat.github.io/ToDoList_ITG/)
