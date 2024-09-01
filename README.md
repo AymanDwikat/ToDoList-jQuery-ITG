@@ -12,4 +12,4 @@ This project is a simple, responsive To-Do List application built with HTML, CSS
 - **Filter Tasks by Status:** Filter tasks to display all tasks, only completed tasks, only pending tasks, or only not completed tasks.
 
 ### Live Demo
-- [Preview the design here](https://ayman-dwikat.github.io/ToDoList_ITG/)
+- [Preview the design here](https://ayman-dwikat.github.io/ToDoList-ITG/)
