@@ -1,9 +1,9 @@
 ## Responsive To-Do List Application Using jQuery
 
-This project is a simple, responsive To-Do List application built with HTML, CSS, Bootstrap, and jQuery. The application allows users to add, edit, delete, and delete all tasks, set deadlines, and save tasks in local storage for persistence. It features a responsive design that works seamlessly across desktop and mobile devices.
+This project is a simple, responsive To-Do List application built with **HTML**, **CSS**, **Bootstrap**, and **jQuery**. The application allows users to add, edit, delete, and delete all tasks, set deadlines, and save tasks in local storage for persistence. It features a responsive design that works seamlessly across desktop and mobile devices.
 
 ### Features
-- **Task Management:** Add, edit, delete and delete all tasks.
+- **Task Management:** Add, edit, delete, and delete all tasks.
 - **Deadline Setting:** Use a date and time picker to set deadlines.
 - **Persistence:** Save tasks in local storage to retain them after page reload.
 - **Responsive Design:** Built with Bootstrap's grid system for a mobile-friendly layout.
